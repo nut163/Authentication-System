@@ -1,0 +1,38 @@
+{
+  "authentication_methods": {
+    "username_password": {
+      "enabled": true
+    },
+    "otp_email": {
+      "enabled": true,
+      "email_server": {
+        "host": "smtp.example.com",
+        "port": 587,
+        "username": "user@example.com",
+        "password": "password"
+      }
+    },
+    "magic_link": {
+      "enabled": true,
+      "email_server": {
+        "host": "smtp.example.com",
+        "port": 587,
+        "username": "user@example.com",
+        "password": "password"
+      }
+    },
+    "sso": {
+      "enabled": true,
+      "provider_details": {
+        "url": "https://sso.example.com",
+        "client_id": "client_id",
+        "client_secret": "client_secret"
+      }
+    },
+    "google": {
+      "enabled": true,
+      "client_id": "client_id",
+      "client_secret": "client_secret"
+    }
+  }
+}

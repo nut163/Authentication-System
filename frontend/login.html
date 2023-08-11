@@ -1,0 +1,39 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <script src="login.js"></script>
+    <script src="form_validation.js"></script>
+    <script src="ajax_integration.js"></script>
+</head>
+<body onload="displayAuthenticationOptions()">
+    <div id="userFeedbackMessage"></div>
+    <form id="loginForm" onsubmit="sendAjaxRequest(event)">
+        <div id="usernamePasswordOption" style="display:none;">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div id="otpEmailOption" style="display:none;">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="otp">OTP:</label>
+            <input type="text" id="otp" name="otp">
+        </div>
+        <div id="magicLinkOption" style="display:none;">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div id="ssoOption" style="display:none;">
+            <button type="button" onclick="integrateThirdPartyService('sso')">Login with SSO</button>
+        </div>
+        <div id="googleOption" style="display:none;">
+            <button type="button" onclick="integrateThirdPartyService('google')">Login with Google</button>
+        </div>
+        <input type="submit" value="Login">
+    </form>
+</body>
+</html>
+```
